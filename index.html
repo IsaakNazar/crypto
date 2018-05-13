@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>coinBazar</title>
   </head>
@@ -34,11 +37,11 @@
               <div class="centercontainer">
                 <ul>
                   <li class="list_items"><a href="#">About</a></li>
-                  <li class="list_items"><a href="#">Features</a></li>
-                  <li class="list_items"><a href="#">Products</a></li>
-                  <li class="list_items"><a href="#">Roadmap</a></li>
-                  <li class="list_items"><a href="#">Partners</a></li>
-                  <li class="list_items"><a href="#">FAQ</a></li>
+                  <li class="list_items"><a href="#features">Features</a></li>
+                  <li class="list_items"><a href="#products">Products</a></li>
+                  <li class="list_items"><a href="#roadmap">Roadmap</a></li>
+                  <li class="list_items"><a href="#partners">Partners</a></li>
+                  <li class="list_items"><a href="#faqfaq">FAQ</a></li>
                 </ul>
               </div>
             </div>
@@ -120,7 +123,7 @@
       </div>
 
       <!-- features -->
-      <div class="features_container">
+      <div id="features" class="features_container">
         <h1>Features</h1>
         <div class="feat_wrap">
           <div class="features">
@@ -147,7 +150,7 @@
       </div>
 
       <!-- SET OF PRODUCTS -->
-      <div class="set_of_products">
+      <div id="products" class="set_of_products">
         <h1>Current set of products in development under first phase</h1>
 
         <div class="products_wrap">
@@ -214,6 +217,157 @@
           </div>
         </div>
       </div>
+
+
+      <!-- ROADMAP -->
+      <div id="roadmap" class="roadmap_container">
+        <div class="rm_text">
+          <h1>Roadmap</h1>
+        </div>
+        <div class="rm_box">
+          <div class="rm_left">
+            <div class="one_l">
+              <h3>Q2 2018</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+            </div>
+            <div class="two_l"></div>
+            <div class="three_l">
+              <h3>Q4 2018</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. </p>
+            </div>
+            <div class="four_l"></div>
+          </div>
+          <div class="rm_center">
+            <img src="images/roadmap2.png" alt="">
+          </div>
+          <div class="rm_right">
+            <div class="one_r"></div>
+            <div class="two_r">
+              <h3>Q3 2018</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboris nisi ut aliquip ex ea commodo consequat laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="three_r"></div>
+            <div class="four_r">
+              <h3>Q3 2018</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- big version of slider -->
+      <div id="partners" class="slider_container">
+        <div class="partners_header">
+          <h1>Partners</h1>
+        </div>
+        <div class="slide_img_wrap">
+          <div class="arrows">
+            <i class="fas fa-angle-left fa-2x"></i>
+          </div>
+          <div class="slide_image">
+            <img src="images/bitgo-secure.png" alt="">
+          </div>
+          <div class="slide_image">
+            <img src="images/nous.jpg" alt="">
+          </div>
+          <div class="slide_image">
+            <img src="images/bitgo-instant2.jpg" alt="">
+          </div>
+          <div class="arrows">
+            <i class="fas fa-angle-right fa-2x"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- .mobile_slider -->
+      <div class="mobile_slider">
+        <div class="mini_slider">
+          <div class="arrow_icons left"><i class="fas fa-angle-left fa-2x"></i></div>
+          <div class="mini_slide_wrapper">
+            <img src="images/bitgo-secure2.jpg" alt="">
+            <img src="images/nous2.jpg" alt="">
+            <img src="images/bitgo-instant2.jpg" alt="">
+          </div>
+          <div class="arrow_icons right"><i class="fas fa-angle-right fa-2x"></i></div>
+        </div>
+      </div>
+
+
+      <!-- FAQ -->
+      <div id="faqfaq" class="faq_container">
+        <div class="faq_text">
+          <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="faq_wrapper">
+          <div class="faqs">
+            <div class="question">
+              Is it a question? lksjdfw oijflskj fwe gewgr
+              <img src="images/plus.png" class="plusIcon" alt="" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)">
+            </div>
+            <div class="answer">Definitely it is!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Do you have any questions?
+            <img src="images/plus.png" class="plusIcon" alt="" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer">Sure!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Question number three?
+            <img src="images/plus.png" class="plusIcon" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer" >answer for q3!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Question number three?
+            <img src="images/plus.png" class="plusIcon" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer">answer for q3!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Question number three?
+            <img src="images/plus.png" class="plusIcon" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer">answer for q3!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Question number three?
+            <img src="images/plus.png" class="plusIcon" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer">answer for q3!</div>
+          </div>
+          <div class="faqs">
+            <div class="question">Question number three?
+            <img src="images/plus.png" class="plusIcon" onclick="toggleAnswer(this.parentNode.nextElementSibling, this)"></div>
+            <div class="answer">answer for q3!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+      <footer>
+        <div class="f_header">
+          <h1>the Journey is the reward</h1>
+          <h4>Lorem ipsum alert prompt console log.</h4>
+        </div>
+        <div class="foot_icons">
+          <a href="">
+            <i class="fab fa-facebook-f fa-2x"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-telegram-plane fa-2x"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-btc fa-2x"></i>
+          </a>
+        </div>
+        <div class="copyright">
+          Copyright © 2018 coinBazar All Rights Reserved
+        </div>
+      </footer>
+
+
+
 
     </div>
 
