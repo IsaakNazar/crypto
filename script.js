@@ -1,9 +1,15 @@
-const menu = document.querySelector('.hamburger-menu');
-const nav_fixed = document.querySelector('.nav_positionfixed');
-const nav_cont = document.querySelector('.navcontainer');
-const main_nav = document.querySelector('.main_nav_container');
+const menu = document.querySelector('.hamburger-menu_m');
+const nav_cont_mob = document.querySelector('.navcontainer_m');
+const main_nav_mob = document.querySelector('.main_nav_container_m');
 const container = document.querySelector('.container');
+const bb = document.getElementsByTagName('body');
+const main_nav = document.querySelector('.main_nav_container');
 
+
+
+// window.addEventListener("load", function() {
+//   document.getElementsByTagName('body').style.overflow = 'visible';
+//   });
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
@@ -19,31 +25,11 @@ function toggling() {
   menu.classList.toggle('close-hamburger');
 
   if (document.querySelector('.close-hamburger')) {
-    nav_fixed.style.display = 'block';
-    nav_fixed.style.position = 'relative';
-    nav_fixed.style.textAlign = 'center';
-    nav_fixed.style.height = 'auto';
-    nav_fixed.style.padding = '20px 0';
-    nav_cont.style.height = '90px';
-    nav_cont.style.width = "100%";
-    nav_cont.style.display = 'table';
-    nav_cont = document.querySelector('.navcontainer');
+    main_nav_mob.style.display = 'block';
   } else {
-     main_nav.style.display = 'none';
+     main_nav_mob.style.display = 'none';
   }
-
-
 }
-
-function myFunction(x) {
-    if (x.matches) { // If media query matches
-        nav_fixed.style.display = 'block';
-    }
-}
-
-var x = window.matchMedia("(min-width: 651px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction)
 
 
 menu.addEventListener('click', toggling);
@@ -53,11 +39,17 @@ function toggleAnswer(el, pl) {
   pl.classList.toggle('openAnswer');
 
   if (el.style.display === 'block') {
-    el.style.display = 'none';
+    // setTimeout(() => {el.style.opacity = '0';}, 500)
+    // el.style.display = 'none';
+    el.style.opacity = '0';
+    setTimeout(() => {el.style.display = 'none';}, 250)
   } else {
     el.style.display = 'block';
+    setTimeout(() => {el.style.opacity = '1';}, 1)
   }
 }
+
+//move images on carousel slider
 
 let slider = document.querySelector('.mini_slider'),
 next = document.querySelector('.right'),
@@ -89,8 +81,11 @@ prev.addEventListener('click', function() {
   switchImg();
 });
 
+
+
+// Add smooth scrolling to all links
+
 $(document).ready(function(){
-  // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
     if (this.hash !== "") {
@@ -109,11 +104,5 @@ $(document).ready(function(){
         window.location.hash = hash;
       });
     }
-  });
-});
-
-$(document).ready(function() {
-  $('.plusIcon').click(function() {
-    $('.answer').fadeIn();
   });
 });
